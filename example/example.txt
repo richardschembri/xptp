@@ -1,0 +1,66 @@
+xptp
+
+Based on::
+     • sent (https://tools.suckless.org/sent/)
+     • Takahashi
+
+Why?
+• PPTX is bloated
+• LATEX is bloated
+• PDF is bloated
+
+also:
+sent is not cross platform and
+terminal presentations
+don't support images…
+
+@images/xptp_nontransparent.jpg
+this text will not be displayed, since the @ at the start of the first line
+makes this paragraph an image slide.
+
+easy to use
+
+▸ one slide per paragraph
+▸ lines starting with # are ignored
+▸ image slide: paragraph containing @FILENAME
+▸ empty slide: just use a \ as a paragraph
+
+differences from sent
+
+▸ GUI
+▸ Dark mode/light mode
+▸ Does not auto exit after the last slide, "EOF" is shown instead
+
+
+# This is a comment and will not be part of the presentation
+
+# multiple empty lines between paragraphs are also ignored
+
+
+# The following lines should produce
+# one empty slide
+
+
+
+\
+\
+
+\@this_line_actually_started_with_a_\.png
+\#This line as well
+⇒ Prepend a backslash to kill behaviour of special characters
+
+Images are handled in the
+http://tools.suckless.org/farbfeld/
+format internally.
+
+xptp also supports transparent images and special characters.
+
+@images/xptp_transparent.png
+
+😀😁😂😃😄😅😆😇😈😉😊😋😌😍😎😏
+😐😑😒😓😔😕😖😗😘😙😚😛😜😝😞😟
+😠😡😢😣😥😦😧😨😩😪😫😭😮😯😰😱
+😲😳😴😵😶😷😸😹😺😻😼😽😾😿🙀☠
+
+thanks.
+questions?
