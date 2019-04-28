@@ -1,9 +1,9 @@
 # xptp: Crossplatform Plain Text Presentation
 
-[ver](https://img.shields.io/badge/ver-0.1.0--alpha-blue.svg)
+<img src="https://img.shields.io/badge/ver-0.1.0--alpha-blue.svg"></img>
 
 A cross platform implementation of [sent](https://tools.suckless.org/sent/)
-using the [Godot engina](https://godotengine.org/)
+using the [Godot engine](https://godotengine.org/)
 
 ## (Non-)Features
 
@@ -16,8 +16,6 @@ using the [Godot engina](https://godotengine.org/)
 * No fancy layout options (different font sizes, different colors, …)
 * No animations
 * No support for automatic layouting paragraphs
-* No export function. If you really need one, just use a shell script with
-xdotool and your favorite screenshot application.
 * Slides with exuberant amount of lines or characters produce rendering
 will not fit in the slide preventing you from holding bad presentations.
 
