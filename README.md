@@ -44,5 +44,5 @@ will not fit in the slide preventing you from holding bad presentations.
 This project is licensed under the GPLv3 License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Third Party Assets
-* (SF UI Text Regular font)[https://fontlibrary.org/en/font/sf-ui-text-regular-]
-* (Symbola)[https://fonts2u.com/symbola.font]
+* [SF UI Text Regular font](https://fontlibrary.org/en/font/sf-ui-text-regular-)
+* [Symbola](https://fonts2u.com/symbola.font)
