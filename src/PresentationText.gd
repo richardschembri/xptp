@@ -57,9 +57,10 @@ func fit_text_to_screen():
 	var newFontSize = newFontSizeByHeight
 	if (newFontSize > newFontSizeByWidth):
 		newFontSize = newFontSizeByWidth
-		print("Width adjust font")
+		# print("Width adjust font")
 	else:
-		print("Height adjust font")
+		# print("Height adjust font")
+		pass
 	if (newFontSize < 20):
 		newFontSize = 20
 	get("custom_fonts/font").set_size(newFontSize)

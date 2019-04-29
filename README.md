@@ -21,11 +21,11 @@ will not fit in the slide preventing you from holding bad presentations.
 
 ## Features
 * Simple GUI
-* Dark mode/Light mode
+* Dark mode / Light mode
 
 ## Todo
 * Improve text resizing
-* Rewite in GDNative/c++
+* Rewite in `GDNative` / `c++`
 * Accept command line parameters
 * Toggle progress
 * Config file?

@@ -6,6 +6,7 @@ onready var presentation_image = get_node("Background/PresentationImage")
 onready var filedialogue = get_node("FileDialog")
 onready var darkmode = get_node("MainMenu/MenuContainer/DarkMode")
 onready var mainmenu = get_node("MainMenu")
+onready var window_button = get_node("MainMenu/MenuContainer/WindowButton")
 
 var currentSlideIndex = 0
 var slides = []
@@ -109,6 +110,8 @@ func _process(delta):
 		presentation_text.hide()
 		presentation_image.hide()
 		mainmenu.show()
+	if Input.is_action_just_pressed("ui_window_mode"):
+		toggle_window()
 
 func open_file():
 	mainmenu.hide()	
@@ -116,6 +119,17 @@ func open_file():
 	var file_text = get_file_text(file_path)
 	parse_file_text(file_text)
 	display_slide()	
+	
+func toggle_window():
+	OS.window_fullscreen = !OS.window_fullscreen
+	var window_button_text = "window"
+	if (!OS.window_fullscreen):
+		OS.set_window_size(Vector2(1024, 600))
+		presentation_text._on_PresentationText_resized()
+		window_button.text = ""
+	else:
+		window_button_text = "fullscreen"
+	window_button.text = "    w: Window Mode ({0})".format([window_button_text])
 
 func _on_FileDialog_confirmed():
 	open_file()
@@ -140,3 +154,7 @@ func _on_OpenFileButton_pressed():
 
 func _on_QuitButton_pressed():
 	get_tree().quit()
+
+
+func _on_WindowButton_pressed():
+	toggle_window()

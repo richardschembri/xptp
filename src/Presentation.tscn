@@ -1,22 +1,13 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Presentation.gd" type="Script" id=1]
 [ext_resource path="res://ST-UI-Text-Regular.tres" type="DynamicFont" id=2]
 [ext_resource path="res://PresentationText.gd" type="Script" id=3]
 [ext_resource path="res://Symbola_hint.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://SF-UI-Text-Regular.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://Button-Text.tres" type="DynamicFont" id=6]
 
 [sub_resource type="DynamicFont" id=1]
-size = 30
-font_data = ExtResource( 5 )
-fallback/0 = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 30
-font_data = ExtResource( 5 )
-fallback/0 = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=3]
 size = 30
 font_data = ExtResource( 5 )
 fallback/0 = ExtResource( 4 )
@@ -99,27 +90,35 @@ margin_bottom = -20.0
 alignment = 1
 
 [node name="DarkMode" type="CheckButton" parent="MainMenu/MenuContainer"]
-margin_top = 85.0
+margin_top = 62.0
 margin_right = 540.0
-margin_bottom = 130.0
+margin_bottom = 107.0
 custom_fonts/font = SubResource( 1 )
 pressed = true
 text = "     t: Dark Mode 💡"
 
 [node name="OpenFileButton" type="Button" parent="MainMenu/MenuContainer"]
-margin_top = 134.0
+margin_top = 111.0
 margin_right = 540.0
-margin_bottom = 177.0
+margin_bottom = 154.0
 rect_pivot_offset = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = ExtResource( 6 )
 text = "     o: Open 📂"
 align = 0
 
-[node name="QuitButton" type="Button" parent="MainMenu/MenuContainer"]
-margin_top = 181.0
+[node name="WindowButton" type="Button" parent="MainMenu/MenuContainer"]
+margin_top = 158.0
 margin_right = 540.0
-margin_bottom = 224.0
-custom_fonts/font = SubResource( 3 )
+margin_bottom = 201.0
+custom_fonts/font = ExtResource( 6 )
+text = "    w: Window Mode (window)"
+align = 0
+
+[node name="QuitButton" type="Button" parent="MainMenu/MenuContainer"]
+margin_top = 205.0
+margin_right = 540.0
+margin_bottom = 248.0
+custom_fonts/font = ExtResource( 6 )
 text = "     q: Quit 🚪"
 align = 0
 
@@ -128,4 +127,5 @@ align = 0
 [connection signal="file_selected" from="FileDialog" to="." method="_on_FileDialog_file_selected"]
 [connection signal="toggled" from="MainMenu/MenuContainer/DarkMode" to="." method="_on_DarkMode_toggled"]
 [connection signal="pressed" from="MainMenu/MenuContainer/OpenFileButton" to="." method="_on_OpenFileButton_pressed"]
+[connection signal="pressed" from="MainMenu/MenuContainer/WindowButton" to="." method="_on_WindowButton_pressed"]
 [connection signal="pressed" from="MainMenu/MenuContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
