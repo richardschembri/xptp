@@ -1,6 +1,6 @@
 # xptp: Crossplatform Plain Text Presentation
 
-<img src="https://img.shields.io/badge/ver-0.1.0--alpha-blue.svg"></img>
+<img src="https://img.shields.io/badge/ver-0.1.1--alpha-blue.svg"></img>
 
 A cross platform implementation of [sent](https://tools.suckless.org/sent/)
 using the [Godot engine](https://godotengine.org/)
