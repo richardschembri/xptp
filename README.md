@@ -1,6 +1,6 @@
 # xptp: Crossplatform Plain Text Presentation
 
-<img src="https://img.shields.io/badge/ver-0.2.0--alpha-blue.svg"></img>
+<img src="https://img.shields.io/badge/ver-0.3.0--alpha-blue.svg"></img>
 
 A minimilistic presentation application that makes use of a plain text
 file. Every paragraph or image filepath represents a slide in the presentation.
@@ -32,6 +32,7 @@ will not fit in the slide preventing you from holding bad presentations.
 * Accept command line parameters
 * ~~Toggle slide number~~
 * Config file?
+* Custom Font support
 
 ## Controls
 
@@ -41,8 +42,9 @@ will not fit in the slide preventing you from holding bad presentations.
 * <kbd>t</kbd>: Toggle dark mode
 * <kbd>n</kbd> / _Swipe down_: Toggle slide number
 * <kbd>w</kbd>: Toggle window mode (windowed/fullscreen)
+* <kbd>u</kbd>: Unload presentation
 * <kbd>q</kbd>: Quit
-* <kbd>Esc</kbd>: Back to main menu
+* <kbd>Esc</kbd> / _Swipe up_: Toggle main menu
 
 ## License
 

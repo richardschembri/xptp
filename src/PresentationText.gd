@@ -8,7 +8,7 @@ extends Label
 var baseWidth = 1024; # 984
 var baseHeight = 600;
 var baseFontSize = 50;
-var baseHChars = 40; # 38
+var baseHChars = 38; # 38
 var baseVChars = 8;
 
 var masterFontWidth = baseWidth * baseFontSize
