@@ -7,6 +7,8 @@ onready var filedialogue = get_node("FileDialog")
 onready var darkmode = get_node("CenterContainer/MainMenu/MenuContainer/DarkMode")
 onready var mainmenu = get_node("CenterContainer/MainMenu")
 onready var window_button = get_node("CenterContainer/MainMenu/MenuContainer/WindowButton")
+onready var slide_number = get_node("Background/SlideNumber")
+onready var view_slide_number = get_node("CenterContainer/MainMenu/MenuContainer/ViewSlideNumber")
 const ICON_IMAGE = "🖼"
 const ICON_EOF = "📄"
 
@@ -47,11 +49,8 @@ func set_presentation_text(text):
 	
 # Called when the node enters the scene tree for the first time.
 func _ready():	
-	var foo = "_"
-	print("Char length : {0}".format([foo.to_utf8().size()]))
-	var foo1 = "🐖"
-	print("Char length : {0}".format([foo1.to_utf8().size()]))	
-	var foo2 ="this is a test"
+	_on_DarkMode_toggled(darkmode.pressed)
+	toggle_slide_number()
 	
 func get_file_text(file_path):
 	if not file.file_exists(file_path):
@@ -85,6 +84,7 @@ func parse_file_text(file_text):
 	
 func display_slide():
 	var slide = slides[currentSlideIndex]
+	slide_number.text = "{0}/{1}".format([currentSlideIndex + 1, slides.size()])
 	if slide.strip_edges().begins_with("@"):
 		set_presentation_image(slide)
 	else:
@@ -171,11 +171,11 @@ func _input(event):
 		darkmode.pressed = !darkmode.pressed
 		_on_DarkMode_toggled(darkmode.pressed)
 	if Input.is_action_just_pressed("ui_cancel"):
-		presentation_text.hide()
-		presentation_image.hide()
 		mainmenu.show()
 	if Input.is_action_just_pressed("ui_window_mode"):
 		toggle_window()
+	if Input.is_action_just_pressed("ui_slide_number"):
+		toggle_slide_number(true)
 	
 func _calculate_swipe(swipe_end):
 	if swipe_start == null: 
@@ -195,9 +195,24 @@ func _calculate_swipe(swipe_end):
 		
 
 func _on_Control_swipe(args):
-	if args == "right":
-		next_slide()
-	if args == "left":
-		prev_slide()
+	match args:
+		"right":
+			next_slide()
+		"left":
+			prev_slide()
+		"up":
+			mainmenu.show()
+		"down":
+			toggle_slide_number(true)
 
 
+func toggle_slide_number(toggle = false):
+	if toggle:
+		view_slide_number.pressed = !view_slide_number.pressed
+	_on_ViewSlideNumber_toggled(view_slide_number.pressed)
+
+func _on_ViewSlideNumber_toggled(button_pressed):
+	if button_pressed:
+		slide_number.show()
+	else:
+		slide_number.hide()

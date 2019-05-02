@@ -1,6 +1,6 @@
 # xptp: Crossplatform Plain Text Presentation
 
-<img src="https://img.shields.io/badge/ver-0.1.1--alpha-blue.svg"></img>
+<img src="https://img.shields.io/badge/ver-0.2.0--alpha-blue.svg"></img>
 
 A minimilistic presentation application that makes use of a plain text
 file. Every paragraph or image filepath represents a slide in the presentation.
@@ -30,15 +30,17 @@ will not fit in the slide preventing you from holding bad presentations.
 * Improve text resizing
 * Rewite in `GDNative` / `c++`
 * Accept command line parameters
-* Toggle progress
+* ~~Toggle slide number~~
 * Config file?
 
 ## Controls
 
-* _Arrow Keys / Vim navigation keys_: Navigation
+* _Arrow Keys / Vim navigation keys / Swipe left or right_: Navigation
 * <kbd>space</kbd>: Next slide
 * <kbd>o</kbd>: Open file dialogue
 * <kbd>t</kbd>: Toggle dark mode
+* <kbd>n</kbd> / _Swipe down_: Toggle slide number
+* <kbd>w</kbd>: Toggle window mode (windowed/fullscreen)
 * <kbd>q</kbd>: Quit
 * <kbd>Esc</kbd>: Back to main menu
 
