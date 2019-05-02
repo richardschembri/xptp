@@ -2,7 +2,10 @@
 
 <img src="https://img.shields.io/badge/ver-0.1.1--alpha-blue.svg"></img>
 
-A cross platform implementation of [sent](https://tools.suckless.org/sent/)
+A minimilistic presentation application that makes use of a plain text
+file. Every paragraph or image filepath represents a slide in the presentation.
+
+It is essentially a cross platform implementation of [sent](https://tools.suckless.org/sent/)
 using the [Godot engine](https://godotengine.org/)
 
 ## (Non-)Features

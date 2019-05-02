@@ -8,14 +8,14 @@ extends Label
 var baseWidth = 1024; # 984
 var baseHeight = 600;
 var baseFontSize = 50;
-var baseHChars = 38; # 38
+var baseHChars = 40; # 38
 var baseVChars = 8;
 
 var masterFontWidth = baseWidth * baseFontSize
 var masterFontHeight = baseHeight * baseFontSize
 
-var currHChars = baseHChars;
-var currVChars = baseVChars;
+var currHChars = baseHChars
+var currVChars = baseVChars
 
 
 # 1920 * 16font * 38 characters / 2560 * characters = 12font
@@ -29,6 +29,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
 
 func set_char_bounds():
 	var lines = text.split("\n")
@@ -52,17 +53,20 @@ func fit_text_to_screen():
 	var vCharsModifier = float(baseVChars) / float(currVChars)
 	
 	var newFontSizeByWidth = ((baseFontSize * 2) - (int((float(masterFontWidth) / float(current_size.x))))) * hCharsModifier
-	
+	var modfiedType = "V"
 	var newFontSizeByHeight = ((baseFontSize * 2) - (int((float(masterFontHeight) / float(current_size.y))))) * vCharsModifier
 	var newFontSize = newFontSizeByHeight
 	if (newFontSize > newFontSizeByWidth):
+		modfiedType = "H"
 		newFontSize = newFontSizeByWidth
 		# print("Width adjust font")
 	else:
 		# print("Height adjust font")
 		pass
+
 	if (newFontSize < 20):
 		newFontSize = 20
+	print("{0}Chars: {1} -> Font: {2}".format([modfiedType, currHChars, newFontSize]))
 	get("custom_fonts/font").set_size(newFontSize)
 
 func _on_PresentationText_resized():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Presentation.gd" type="Script" id=1]
 [ext_resource path="res://ST-UI-Text-Regular.tres" type="DynamicFont" id=2]
@@ -6,6 +6,14 @@
 [ext_resource path="res://Symbola_hint.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://SF-UI-Text-Regular.otf" type="DynamicFontData" id=5]
 [ext_resource path="res://Button-Text.tres" type="DynamicFont" id=6]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.156863, 0.329412, 0.470588, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.278431, 0.164706, 0.207843, 1 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -49,13 +57,6 @@ margin_bottom = -35.0
 expand = true
 stretch_mode = 6
 
-[node name="Background2" type="Panel" parent="."]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-size_flags_horizontal = 2
-size_flags_vertical = 2
-
 [node name="FileDialog" type="FileDialog" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -71,16 +72,20 @@ access = 2
 current_dir = "/home/richards/Godot/xptp"
 current_path = "/home/richards/Godot/xptp/"
 
-[node name="MainMenu" type="Panel" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 200.0
-margin_top = 100.0
-margin_right = -200.0
-margin_bottom = -150.0
-rect_min_size = Vector2( 640, 320 )
 
-[node name="MenuContainer" type="VBoxContainer" parent="MainMenu"]
+[node name="MainMenu" type="Panel" parent="CenterContainer"]
+margin_left = 192.0
+margin_top = 140.0
+margin_right = 832.0
+margin_bottom = 460.0
+rect_min_size = Vector2( 640, 320 )
+rect_pivot_offset = Vector2( 0.5, 0.5 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="MenuContainer" type="VBoxContainer" parent="CenterContainer/MainMenu"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 50.0
@@ -89,43 +94,44 @@ margin_right = -50.0
 margin_bottom = -20.0
 alignment = 1
 
-[node name="DarkMode" type="CheckButton" parent="MainMenu/MenuContainer"]
-margin_top = 62.0
+[node name="DarkMode" type="CheckButton" parent="CenterContainer/MainMenu/MenuContainer"]
+margin_top = 47.0
 margin_right = 540.0
-margin_bottom = 107.0
+margin_bottom = 92.0
 custom_fonts/font = SubResource( 1 )
 pressed = true
 text = "     t: Dark Mode 💡"
 
-[node name="OpenFileButton" type="Button" parent="MainMenu/MenuContainer"]
-margin_top = 111.0
+[node name="OpenFileButton" type="Button" parent="CenterContainer/MainMenu/MenuContainer"]
+margin_top = 96.0
 margin_right = 540.0
-margin_bottom = 154.0
+margin_bottom = 139.0
 rect_pivot_offset = Vector2( 0.5, 0.5 )
 custom_fonts/font = ExtResource( 6 )
 text = "     o: Open 📂"
 align = 0
 
-[node name="WindowButton" type="Button" parent="MainMenu/MenuContainer"]
-margin_top = 158.0
+[node name="WindowButton" type="Button" parent="CenterContainer/MainMenu/MenuContainer"]
+margin_top = 143.0
 margin_right = 540.0
-margin_bottom = 201.0
+margin_bottom = 186.0
 custom_fonts/font = ExtResource( 6 )
 text = "    w: Window Mode (window)"
 align = 0
 
-[node name="QuitButton" type="Button" parent="MainMenu/MenuContainer"]
-margin_top = 205.0
+[node name="QuitButton" type="Button" parent="CenterContainer/MainMenu/MenuContainer"]
+margin_top = 190.0
 margin_right = 540.0
-margin_bottom = 248.0
+margin_bottom = 233.0
 custom_fonts/font = ExtResource( 6 )
 text = "     q: Quit 🚪"
 align = 0
 
+[connection signal="swipe" from="." to="." method="_on_Control_swipe"]
 [connection signal="resized" from="Background/PresentationText" to="Background/PresentationText" method="_on_PresentationText_resized"]
 [connection signal="confirmed" from="FileDialog" to="." method="_on_FileDialog_confirmed"]
 [connection signal="file_selected" from="FileDialog" to="." method="_on_FileDialog_file_selected"]
-[connection signal="toggled" from="MainMenu/MenuContainer/DarkMode" to="." method="_on_DarkMode_toggled"]
-[connection signal="pressed" from="MainMenu/MenuContainer/OpenFileButton" to="." method="_on_OpenFileButton_pressed"]
-[connection signal="pressed" from="MainMenu/MenuContainer/WindowButton" to="." method="_on_WindowButton_pressed"]
-[connection signal="pressed" from="MainMenu/MenuContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="toggled" from="CenterContainer/MainMenu/MenuContainer/DarkMode" to="." method="_on_DarkMode_toggled"]
+[connection signal="pressed" from="CenterContainer/MainMenu/MenuContainer/OpenFileButton" to="." method="_on_OpenFileButton_pressed"]
+[connection signal="pressed" from="CenterContainer/MainMenu/MenuContainer/WindowButton" to="." method="_on_WindowButton_pressed"]
+[connection signal="pressed" from="CenterContainer/MainMenu/MenuContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
