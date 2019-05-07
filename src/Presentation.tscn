@@ -7,7 +7,7 @@
 [ext_resource path="res://Check-Button-Font.tres" type="DynamicFont" id=5]
 [ext_resource path="res://Button-Text.tres" type="DynamicFont" id=6]
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.156863, 0.329412, 0.470588, 1 )
 border_width_left = 5
 border_width_top = 5
@@ -73,8 +73,8 @@ window_title = "Open a File"
 dialog_hide_on_ok = true
 mode = 0
 access = 2
-current_dir = "/home/richards/Godot/xptp"
-current_path = "/home/richards/Godot/xptp/"
+current_dir = "/home/richards/Projects/Personal/xptp/src"
+current_path = "/home/richards/Projects/Personal/xptp/src/"
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchor_right = 1.0
@@ -87,7 +87,7 @@ margin_right = 832.0
 margin_bottom = 460.0
 rect_min_size = Vector2( 640, 320 )
 rect_pivot_offset = Vector2( 0.5, 0.5 )
-custom_styles/panel = SubResource( 2 )
+custom_styles/panel = SubResource( 1 )
 
 [node name="MenuContainer" type="VBoxContainer" parent="CenterContainer/MainMenu"]
 anchor_right = 1.0
