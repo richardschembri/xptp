@@ -14,11 +14,11 @@
    viewBox="0 0 210 297"
    version="1.1"
    id="svg8"
-   sodipodi:docname="icon.svg"
+   sodipodi:docname="logo.svg"
    inkscape:version="0.92.4 5da689c313, 2019-01-14"
-   inkscape:export-filename="/home/richards/Projects/Personal/xptp/icon.png"
-   inkscape:export-xdpi="258.66071"
-   inkscape:export-ydpi="258.66071">
+   inkscape:export-filename="/home/richards/Projects/Personal/xptp/doc/logo.png"
+   inkscape:export-xdpi="219.36864"
+   inkscape:export-ydpi="219.36864">
   <defs
      id="defs2">
     <marker
@@ -85,11 +85,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="7.1575004"
-     inkscape:cx="267.6297"
-     inkscape:cy="730.43768"
+     inkscape:zoom="2.5305585"
+     inkscape:cx="380.81424"
+     inkscape:cy="757.42155"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer7"
+     inkscape:current-layer="layer8"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1027"
@@ -105,10 +105,43 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Logo Background"
+     sodipodi:insensitive="true">
+    <rect
+       style="opacity:1;fill:#f9f9f9;fill-opacity:1;stroke:none;stroke-width:0.89999998;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect918"
+       width="59.28286"
+       height="28.020821"
+       x="63.151405"
+       y="86.634712" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer8"
+     inkscape:label="Logo Text"
+     sodipodi:insensitive="true"
+     style="display:inline">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#0195ff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="95.865219"
+       y="103.43394"
+       id="text907"><tspan
+         sodipodi:role="line"
+         id="tspan905"
+         x="95.865219"
+         y="103.43394"
+         style="fill:#0195ff;fill-opacity:1;stroke-width:0.26458332">x<tspan
+   style="fill:#000000"
+   id="tspan915">ptp</tspan></tspan></text>
+  </g>
   <g
      inkscape:groupmode="layer"
      id="layer7"

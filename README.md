@@ -1,3 +1,5 @@
+![logo](doc/logo.png "xptp")
+
 # xptp: Crossplatform Plain Text Presentation
 
 <img src="https://img.shields.io/badge/ver-0.3.0--alpha-blue.svg"></img>
