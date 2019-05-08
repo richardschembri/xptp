@@ -25,6 +25,8 @@ var minimum_drag = 100
 # ----------------------------------------------------------------
 
 func _ready():	
+	PhysicsServer.set_active(false)
+	Physics2DServer.set_active(false)
 	_on_DarkMode_toggled(darkmode.pressed)
 	toggle_slide_number()
 	show_mainmenu(false)

@@ -17,6 +17,7 @@ _global_script_class_icons={
 
 config/name="xptp"
 run/main_scene="res://Presentation.tscn"
+run/low_processor_mode=true
 config/icon="res://icon.png"
 
 [input]
@@ -87,4 +88,13 @@ ui_unload_slide={
 
 [rendering]
 
+quality/driver/fallback_to_gles2=true
+quality/intended_usage/framebuffer_allocation=1
+quality/intended_usage/framebuffer_allocation.mobile=1
+quality/shadows/filter_mode=0
+quality/reflections/texture_array_reflections=false
+quality/reflections/high_quality_ggx=false
+quality/subsurface_scattering/quality=0
+quality/voxel_cone_tracing/high_quality=false
+quality/depth/hdr=false
 environment/default_environment="res://default_env.tres"

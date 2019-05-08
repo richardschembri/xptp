@@ -2,7 +2,7 @@
 
 # xptp: Crossplatform Plain Text Presentation
 
-<img src="https://img.shields.io/badge/ver-0.3.0--alpha-blue.svg"></img>
+<img src="https://img.shields.io/badge/ver-0.4.0--alpha-blue.svg"></img>
 
 A minimilistic presentation application that makes use of a plain text
 file. Every paragraph or image filepath represents a slide in the presentation.
