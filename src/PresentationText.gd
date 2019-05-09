@@ -2,18 +2,24 @@ extends Label
 
 var currHChars = 0
 var currVChars = 0
-const MODFIER = 1.75
+const MODFIER = 1.65
 const MINFONTSIZE = 20
+const REGULARCHAR_BITSIZE = 1
+
+func _ready():
+	print("Bit size: {0}".format(["く".to_utf8().size()]))
 
 func set_char_bounds():
 	var lines = text.split("\n")
 	currHChars = 0
+	var currHLength = 0
 	currVChars = lines.size()
 	for i in range(0, lines.size()):
-		if(lines[i].length() > currHChars):
+		if(lines[i].length() > currHLength):
+			currHLength = lines[i].length()
 			currHChars = lines[i].length()
 			for j in range(0, currHChars - 1):
-				if(lines[i][j].to_utf8().size() > 1):
+				if(lines[i][j].to_utf8().size() > REGULARCHAR_BITSIZE):
 					# Wide characters
 					currHChars = currHChars + 1
 

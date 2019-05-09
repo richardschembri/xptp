@@ -62,5 +62,10 @@ xptp also supports transparent images and special characters.
 😠😡😢😣😥😦😧😨😩😪😫😭😮😯😰😱
 😲😳😴😵😶😷😸😹😺😻😼😽😾😿🙀☠
 
+かな文字と 5,300 以上の漢字を含む和文用文字、
+多くの西欧言語で使用される欧文用文字のほか、
+おもな国際音声記号、演算子、特殊記号なども
+サポートします
+
 thanks.
 questions?
