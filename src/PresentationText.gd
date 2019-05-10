@@ -34,8 +34,7 @@ func fit_text_to_screen():
 	var newFontSizeByHeight = int(ceil(current_size.y / currVChars) * MODFIER)
 	var newFontSize = max(min(newFontSizeByHeight, newFontSizeByWidth), MINFONTSIZE)
 
-	#print("{0}Chars: {1} -> Font: {2}".format([modfiedType, currHChars, newFontSize]))
-	print("V:{0} H:{1} F:{2}".format([newFontSizeByHeight, newFontSizeByWidth, newFontSize]))
+	#print("V:{0} H:{1} F:{2}".format([newFontSizeByHeight, newFontSizeByWidth, newFontSize]))
 	get("custom_fonts/font").set_size(newFontSize)
 
 func _on_PresentationText_resized():

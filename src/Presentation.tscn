@@ -97,22 +97,22 @@ margin_right = -50.0
 alignment = 1
 
 [node name="DarkMode" type="CheckButton" parent="CenterContainer/MainMenu/MenuContainer"]
-margin_top = 11.0
+margin_top = 23.0
 margin_right = 540.0
-margin_bottom = 62.0
+margin_bottom = 70.0
 custom_fonts/font = ExtResource( 5 )
 pressed = true
 text = "     t: Dark Mode 💡"
 
 [node name="ViewSlideNumber" type="CheckButton" parent="CenterContainer/MainMenu/MenuContainer"]
-margin_top = 66.0
+margin_top = 74.0
 margin_right = 540.0
-margin_bottom = 117.0
+margin_bottom = 121.0
 custom_fonts/font = ExtResource( 5 )
 text = "    n: Slide Number"
 
 [node name="OpenFileButton" type="Button" parent="CenterContainer/MainMenu/MenuContainer"]
-margin_top = 121.0
+margin_top = 125.0
 margin_right = 540.0
 margin_bottom = 170.0
 rect_pivot_offset = Vector2( 0.5, 0.5 )
@@ -123,23 +123,23 @@ align = 0
 [node name="WindowButton" type="Button" parent="CenterContainer/MainMenu/MenuContainer"]
 margin_top = 174.0
 margin_right = 540.0
-margin_bottom = 223.0
+margin_bottom = 219.0
 custom_fonts/font = ExtResource( 6 )
 text = "    w: Window Mode (window)"
 align = 0
 
 [node name="UnloadButton" type="Button" parent="CenterContainer/MainMenu/MenuContainer"]
-margin_top = 227.0
+margin_top = 223.0
 margin_right = 540.0
-margin_bottom = 276.0
+margin_bottom = 268.0
 custom_fonts/font = ExtResource( 6 )
 text = "    u: Unload Presentation"
 align = 0
 
 [node name="QuitButton" type="Button" parent="CenterContainer/MainMenu/MenuContainer"]
-margin_top = 280.0
+margin_top = 272.0
 margin_right = 540.0
-margin_bottom = 329.0
+margin_bottom = 317.0
 custom_fonts/font = ExtResource( 6 )
 text = "     q: Quit 🚪"
 align = 0

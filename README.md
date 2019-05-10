@@ -2,7 +2,7 @@
 
 # xptp: Crossplatform Plain Text Presentation
 
-<img src="https://img.shields.io/badge/ver-0.5.5--beta-blue.svg"></img>
+<img src="https://img.shields.io/badge/ver-0.6.0--beta-blue.svg"></img>
 
 A minimilistic presentation application that makes use of a plain text
 file. Every paragraph or image filepath represents a slide in the presentation.
@@ -53,5 +53,4 @@ will not fit in the slide preventing you from holding bad presentations.
 This project is licensed under the GPLv3 License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Third Party Assets
-* [SF UI Text Regular font](https://fontlibrary.org/en/font/sf-ui-text-regular-)
-* [Symbola](https://fonts2u.com/symbola.font)
+* [code2003 Font](https://www.fontspace.com/st-gigafont-typefaces/code2003)

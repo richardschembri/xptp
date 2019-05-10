@@ -1,6 +1,6 @@
 xptp
 
-Based on::
+Based on:
      • sent (https://tools.suckless.org/sent/)
      • Takahashi
 
@@ -29,7 +29,7 @@ differences from sent
 
 ▸ GUI
 ▸ Dark mode/light mode
-▸ Does not auto exit after the last slide, "EOF" is shown instead
+▸ "EOF" is shown after the last slide
 
 
 # This is a comment and will not be part of the presentation
@@ -49,10 +49,6 @@ differences from sent
 \#This line as well
 ⇒ Prepend a backslash to kill behaviour of special characters
 
-Images are handled in the
-http://tools.suckless.org/farbfeld/
-format internally.
-
 xptp also supports transparent images and special characters.
 
 @images/xptp_transparent.png
@@ -62,10 +58,7 @@ xptp also supports transparent images and special characters.
 😠😡😢😣😥😦😧😨😩😪😫😭😮😯😰😱
 😲😳😴😵😶😷😸😹😺😻😼😽😾😿🙀☠
 
-かな文字と 5,300 以上の漢字を含む和文用文字、
-多くの西欧言語で使用される欧文用文字のほか、
-おもな国際音声記号、演算子、特殊記号なども
-サポートします
+多言語サポート。
 
 thanks.
 questions?

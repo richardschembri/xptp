@@ -76,9 +76,25 @@ func set_presentation_image(filepath):
 	texture.create_from_image(image)
 	presentation_image.set_texture(texture)
 
+func remove_firstslash(text):
+	if text.strip_edges().begins_with("\\"):
+		text.erase(text.find("\\"), 1)
+	return text
+
+func remove_firstslashes(text):
+	var lines = text.split("\n")
+	for i in range(0, lines.size()):
+		var nline = remove_firstslash(lines[i])
+		if nline != lines[i]:
+			text = text.replace(lines[i], nline)
+	return text
+
 func set_presentation_text(text):
 	presentation_text.show()
 	presentation_image.hide()
+		
+	text = remove_firstslashes(text)
+		
 	presentation_text.text = text
 	if (presentation_text.text.find("\n") <= 0):
 		presentation_text.align = Label.ALIGN_CENTER
@@ -147,6 +163,7 @@ func parse_file_text(file_text):
 				pass
 			elif lines[i].strip_edges().length() == 1 and lines[i].strip_edges().begins_with("\\"):
 				slideText = "{0}\n".format([slideText])
+
 			elif slideText.length() > 0:
 				slideText = "{0}\n{1}".format([slideText, lines[i]])
 			else:
