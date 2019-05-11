@@ -113,7 +113,7 @@ func display_slide():
 		set_presentation_text(slide)
 
 func process_slide_number():
-	slide_number.text = "{0}/{1}".format([currentSlideIndex + 1, slides.size()])
+	slide_number.text = "{0}/{1}".format([min(currentSlideIndex + 1, slides.size() - 1) , slides.size() - 1])
 
 func next_slide():
 	if currentSlideIndex < slides.size() - 1:

@@ -10,9 +10,10 @@ Why?
 • PDF is bloated
 
 also:
-sent is not cross platform and
-terminal presentations
-don't support images…
+  sent is not cross platform
+  and
+  terminal presentations
+  don't support images…
 
 @images/xptp_nontransparent.jpg
 this text will not be displayed, since the @ at the start of the first line

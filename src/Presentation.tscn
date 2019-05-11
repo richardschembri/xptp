@@ -3,7 +3,7 @@
 [ext_resource path="res://Presentation.gd" type="Script" id=1]
 [ext_resource path="res://font/Presentation-Text.tres" type="DynamicFont" id=2]
 [ext_resource path="res://PresentationText.gd" type="Script" id=3]
-[ext_resource path="res://Slide-Number-Font.tres" type="DynamicFont" id=4]
+[ext_resource path="res://font/Slide-Number-Font.tres" type="DynamicFont" id=4]
 [ext_resource path="res://font/Check-Button-Font.tres" type="DynamicFont" id=5]
 [ext_resource path="res://font/Button-Text.tres" type="DynamicFont" id=6]
 
